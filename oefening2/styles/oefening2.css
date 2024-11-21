@@ -1,15 +1,163 @@
+@font-face {
+    font-family: 'black han';
+    src: url('https://assets.codepen.io/274456/BlackHan.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+  }
+
+@font-face {
+    font-family: 'saira';
+    src: url('https://assets.codepen.io/274456/Saira-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+  
+@font-face {
+    font-family: 'saira';
+    src: url('https://assets.codepen.io/274456/Saira-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+  
+  
+  /* coffee font */
+@font-face {
+    font-family: 'ubuntu';
+    src: url('https://assets.codepen.io/274456/Ubuntu-light.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+  
+@font-face {
+    font-family: 'ubuntu';
+    src: url('https://assets.codepen.io/274456/Ubuntu-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+/* A2 font */
+@font-face {
+    font-family: 'archivo';
+    src: url('https://assets.codepen.io/274456/Archivo-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+
+/* font voor hello */
+@font-face {
+    font-family: 'poppins';
+    src: url('https://assets.codepen.io/274456/Poppins-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+/* brillo font */
+/* verzonken font */
+/* wazig font */
+@font-face {
+    font-family: 'coiny';
+    src: url('https://assets.codepen.io/274456/coiny.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+/* messi font */
+@font-face {
+    font-family: 'mansalva';
+    src: url('https://assets.codepen.io/274456/Mansalva-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+/* nemo font */
+@font-face {
+    font-family: "Nemo";
+    src: url("https://assets.codepen.io/274456/nemo.ttf");
+    font-weight:700;
+    font-style:normal;
+    font-display: fallback;
+}
+
+
+
+
+
+*, *::after, *::before {
+box-sizing:border-box;  
+}
+
+
+
 /*******************************/
 /* CODE VOOR HET EERSTE BLOKJE */
 /*******************************/
 
+li:nth-of-type(1) {
+    --color:hsl(0 0% 60%);
+    --background:var(--color);
+    --shadow:hsl(0 0 0% /.5);
 
+    display:grid;
+    place-content:center;
 
+    background-color:var(--background);
+}
 
+li:nth-of-type(1) h2 {
+    font-family:'black han', sans-serif; 
+    font-size:4em;
+    line-height:1em;
+    color:var(--color);
+    text-shadow:.125em .125em .125em var(--shadow);
+}
 
 /*******************************/
 /* CODE VOOR HET TWEEDE BLOKJE */
 /*******************************/
 
+li:nth-of-type(2) {
+    --color:white;
+    --background:midnightblue;
+    --cyan:cyan;
+    --magenta:magenta;
+    --yellow:yellow;
+    --black:black;
+
+    display:grid;
+    place-content:center;
+
+    background-color:var(--background);
+}
+  
+  
+li:nth-of-type(2) h2 {
+    font-family: 'Saira', sans-serif;
+    font-size:4em;
+    line-height:.9em;
+    letter-spacing:.1em;
+    color:var(--color);
+    text-shadow:
+        -.05em -.05em 0 var(--cyan),
+        .05em -.05em 0 var(--magenta),
+        .05em .05em 0  var(--yellow),
+        -.05em .05em 0 var(--black);
+}
+  
 
 
 
@@ -18,7 +166,36 @@
 /* CODE VOOR HET DERDE BLOKJE */
 /******************************/
 
-
+li:nth-of-type(3) {
+    --color:white;
+    --background-text:black;
+    --gradient:linear-gradient(Thistle,PaleVioletRed);
+    --shadow:RebeccaPurple;
+    
+    display:grid;
+    grid-auto-columns:min-content;
+    place-content:center;
+    
+    background-image:var(--gradient);
+  }
+  
+  li:nth-of-type(3) h2 {
+    padding:1.2em .3em;
+    
+    background-color:var(--background-text);
+    box-shadow:
+      0 0 0 .6em var(--color), 
+      0 0 0 .9em var(--shadow);
+    
+    font-family: 'Ubuntu';
+    line-height:1.3em;
+    text-transform:uppercase;
+    color:var(--color);
+  }
+  
+  li:nth-of-type(3) h2::first-line {
+    font-weight:300;
+  }
 
 
 
@@ -26,7 +203,40 @@
 /* CODE VOOR HET VIERDE BLOKJE */
 /******************************/
 
-
+li:nth-of-type(4) {
+    --color:white;
+    --gradient:linear-gradient(45deg, rgb(0 0 204) 50%, rgb(204 0 0) 50%);
+      
+    display:grid;
+    grid-template-columns:min-content;
+    place-content:center;
+    
+    background-image:var(--gradient);
+  }
+  
+  li:nth-of-type(4) h2 {
+    position:relative;
+    rotate:45deg;
+    
+    font-family:'black han', sans-serif;
+    font-size:2.5em;
+    line-height:1em;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--color);
+  }
+  
+  /* vs */
+  li:nth-of-type(4) h2 em {
+    font-style:normal;
+    color:transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color);
+  }
+  
+  
+  
 
 
 
@@ -34,6 +244,37 @@
 /* CODE VOOR HET VIJFDE BLOKJE */
 /******************************/
 
+li:nth-of-type(5) {
+    --brand-blue:rgb(0 128 153);
+    --brand-red:rgb(255 153 153);
+    
+    display:grid;
+    place-content:center;
+  }
+  
+  li:nth-of-type(5) h2 {
+    margin:0;
+    
+    font-size:8em;
+    font-weight:600;
+  }
+  
+  li:nth-of-type(5) h2 span {
+    position:relative;
+    display:inline-block;
+     font-family: 'archivo', sans-serif;
+  } 
+  
+  li:nth-of-type(5) h2 span:first-child {
+    translate:.21em 0em; /* eerst x dan y */
+    color:var(--brand-blue);
+  }
+  
+  li:nth-of-type(5) h2 span:last-child {
+    translate:-.21em 0em; /* eerst x dan y */
+    color:var(--brand-red);
+    mix-blend-mode: multiply;
+  }
 
 
 

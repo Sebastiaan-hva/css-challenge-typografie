@@ -1,3 +1,40 @@
+
+@font-face {
+  font-family: 'montserrat var';
+  src: url('https://assets.codepen.io/274456/Montserrat-Variable.ttf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'tektur var';
+  src: url('https://assets.codepen.io/274456/Tektur-Variable.ttf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'shantel sans var';
+  src: url('https://assets.codepen.io/274456/ShantellSans-Variable.ttf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'source code pro var';
+  src: url('https://assets.codepen.io/274456/SourceCodePro-Variable.ttf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'kablammo var';
+  src: url('https://assets.codepen.io/274456/Kablammo-Variable.ttf');
+  font-display: fallback;
+}
+
+
+
+
+
+
+
 /**********/
 /* COLORS */
 /**********/
@@ -17,33 +54,41 @@
 /***************/
 
 li:nth-of-type(1) {
-  /* JOUW CODE HIER */
+  display:grid;
+  /* spans verticaal in het midden */
+  align-content:center;
   
-  
+  /* -10deg gradient */
+  background-image:
+    linear-gradient(
+      -10deg, 
+      var(--rood) 50%, 
+      var(--wit) 0
+    );
 }
 
-
-/* beide spans */
 li:nth-of-type(1) span {
-  /* JOUW CODE HIER */
+  font-family:'montserrat var', sans-serif;
+  font-size:3em;
+  text-transform:uppercase;
+  text-align:center;
   
-  
+  rotate:-10deg;
 }
 
 
 /* eerste span */
 li:nth-of-type(1) span:nth-of-type(1) {
-  /* JOUW CODE HIER */
-  
-  
+  color:var(--rood);
+  font-weight:850;
 }
+
 
 
 /* tweede span */
 li:nth-of-type(1) span:nth-of-type(2) {
-  /* JOUW CODE HIER */
-  
-  
+  color:var(--wit);
+  font-weight:150;
 }
 
 
@@ -55,18 +100,39 @@ li:nth-of-type(1) span:nth-of-type(2) {
 /**************/
 
 li:nth-of-type(2) {
-  /* JOUW CODE HIER */
-  
-  
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1px;
 }
 
 
 /* alle spans */
 li:nth-of-type(2) span {
-  /* JOUW CODE HIER */
+  aspect-ratio:1;
   
+  /* tekst in het midden van de spans */
+  display:grid;
+  place-content:center;
   
+  background-color:var(--groen);
+  
+  font-family:'montserrat var', sans-serif;
+  font-size:1.5em;
+  color:var(--wit);
 }
+
+
+/* span 1 t/m 9 */
+li:nth-of-type(2) span:nth-of-type(1) { font-weight:113; }
+li:nth-of-type(2) span:nth-of-type(2) { font-weight:227; }
+li:nth-of-type(2) span:nth-of-type(3) { font-weight:289; }
+li:nth-of-type(2) span:nth-of-type(4) { font-weight:367; }
+li:nth-of-type(2) span:nth-of-type(5) { font-weight:453; }
+li:nth-of-type(2) span:nth-of-type(6) { font-weight:563; }
+li:nth-of-type(2) span:nth-of-type(7) { font-weight:613; }
+li:nth-of-type(2) span:nth-of-type(8) { font-weight:747; }
+li:nth-of-type(2) span:nth-of-type(9) { font-weight:899; }
+
 
 
 /* span 1 t/m 9 */
@@ -116,38 +182,57 @@ li:nth-of-type(2) span:nth-of-type(9) {
 /**************/
 
 li:nth-of-type(3) {
-  /* JOUW CODE HIER */
-  
-  
+  display:grid;
+  /* de kolommen zijn smaller dan de spans*/
+  /* daardoor steken de spans uit hun kolom */
+  /* dat zorgt voor de overlap */
+  grid-template-columns:repeat(2, 3.5rem);
+  place-content:center;
+  /* de spans in het midden van hun kolom */
+  /* dat zorgt dat ze aan beide kanten uitsteken */
+  justify-items:center;
 }
 
 
 /* beide spans */
 li:nth-of-type(3) span {
-  /* JOUW CODE HIER */
+  display:block;
+  width:6rem;
+  aspect-ratio:1;
   
+  /* tekst in het midden van de spans */
+  display:grid;
+  place-items:center;
   
+  border-radius:50%;
+  
+  font-family:"tektur var", sans-serif;
+  font-size:2.5em;
+  color:var(--wit);
+  
+  /* de spans mixen met de elementen onder zichzelf */
+  mix-blend-mode:multiply;
 }
 
 
 /* eerste span */
 li:nth-of-type(3) span:nth-of-type(1) {
-  /* developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings */
-  /* de naam ("wdth") en mogeljke waarden vind je bij het font */
-  /* font info: fonts.google.com/specimen/Tektur/tester */
-
-  /* JOUW CODE HIER */
+  background-color:var(--rood);
   
-  
+  font-stretch:75%;
 }
 
 
 /* tweede span */
 li:nth-of-type(3) span:nth-of-type(2) {
-  /* JOUW CODE HIER */
+  background-color:var(--groen);
   
-  
+  font-stretch:100%;
 }
+
+
+
+
 
 
 
@@ -160,9 +245,46 @@ li:nth-of-type(3) span:nth-of-type(2) {
 /* font info: fonts.google.com/specimen/Tektur/tester */
 /* bg img: harmonica.jpg */
 
-/* JOUW CODE HIER */
+li:nth-of-type(4) {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+  background-image: url("https://assets.codepen.io/274456/photo-harmonica.jpg");
+  background-size:cover;
+}
 
 
+/* alle spans */
+li:nth-of-type(4) span {
+  font-family: 'tektur var', sans-serif;
+  font-size:4em;
+  text-transform:uppercase;
+  color:var(--wit);
+}
+
+
+/* span 1 t/m 5 */
+li:nth-of-type(4) span:nth-of-type(1) {
+  font-weight:400;
+  font-stretch:75%;
+}
+li:nth-of-type(4) span:nth-of-type(2) {
+  font-weight:525;
+  font-stretch:81%;
+}
+li:nth-of-type(4) span:nth-of-type(3) {
+  font-weight:650;
+  font-stretch:87%;
+}
+li:nth-of-type(4) span:nth-of-type(4) {
+  font-weight:775;
+  font-stretch:93%;
+}
+li:nth-of-type(4) span:nth-of-type(5) {
+  font-weight:900;
+  font-stretch:100%;
+}
 
 
 
@@ -172,7 +294,27 @@ li:nth-of-type(3) span:nth-of-type(2) {
 
 /* font info: fonts.google.com/specimen/Kablammo/tester */
 
-/* JOUW CODE HIER */
+li:nth-of-type(5) {
+  display:grid;
+  place-content:center;
+  
+  background-color:var(--groen);
+}
+
+
+/* de tekst */
+li:nth-of-type(5) span {
+  font-family:"kablammo var", fantasy;
+  font-size:3em;
+  /* developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings */
+  /* de naam ("MORF") en mogeljke waarden vind je bij het font */
+  /* font info: fonts.google.com/specimen/Kablammo/tester */
+  font-variation-settings: "MORF" 60;
+  color:var(--wit);
+}
+
+
+
 
 
 
